@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>教師課表查詢 | 校務資訊系統</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-page="teacher-schedule">
+    <div class="banner">
+      <div class="banner-title">校務資訊系統</div>
+    </div>
+
+    <div class="page">
+      <div class="toolbar">
+        <a class="home-link" href="../index.html">回首頁</a>
+      </div>
+
+      <h1>教師課表查詢</h1>
+      <p>本頁彙整目前課表與選退選流程中出現的授課教師與課程資料。</p>
+      <p>內容為靜態展示，可用來快速查看教師授課時段與開課資訊。</p>
+
+      <div class="panel">
+        <div class="panel-title">教師課表清單</div>
+
+        <div class="table-wrap">
+          <table class="course-table">
+            <thead>
+              <tr>
+                <th>教師</th>
+                <th>課程名稱</th>
+                <th>課號</th>
+                <th>學分</th>
+                <th>時段</th>
+                <th>教室</th>
+                <th>科系</th>
+                <th>年級</th>
+              </tr>
+            </thead>
+            <tbody id="teacher-schedule-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">教師摘要</div>
+
+        <div class="table-wrap">
+          <table class="summary-table">
+            <tbody id="teacher-summary-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="hint">pages/teacher-schedule.html</p>
+    </div>
+    <script type="module" src="../script.js"></script>
+  </body>
+</html>

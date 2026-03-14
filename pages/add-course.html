@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>線上加選作業 | 校務資訊系統</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-page="add-course">
+    <div class="banner">
+      <div class="banner-title">校務資訊系統</div>
+    </div>
+
+    <div class="page">
+      <div class="toolbar">
+        <a class="home-link" href="../index.html">回首頁</a>
+      </div>
+
+      <h1>線上加選作業</h1>
+      <p>請先選擇欲進入的科系與年級，再前往選課頁面。</p>
+      <p>目前流程為純靜態示意，後續會再補正式內容。</p>
+
+      <div class="panel">
+        <div class="panel-title">選課條件設定</div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="department">科系</label>
+            <select class="form-select" id="department" name="department">
+              <option selected>資訊工程學系</option>
+              <option>企業管理學系</option>
+              <option>應用外語學系</option>
+              <option>財務金融學系</option>
+              <option>觀光休閒學系</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="grade">年級</label>
+            <select class="form-select" id="grade" name="grade">
+              <option>一年級</option>
+              <option selected>二年級</option>
+              <option>三年級</option>
+              <option>四年級</option>
+              <option>延修生</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="action-row">
+          <button class="primary-button button-reset" id="enter-add-course" type="button">
+            確認進入選課
+          </button>
+        </div>
+      </div>
+
+      <p class="hint">pages/add-course.html</p>
+    </div>
+    <script type="module" src="../script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>送出結果 | 校務資訊系統</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-page="result">
+    <div class="banner">
+      <div class="banner-title">校務資訊系統</div>
+    </div>
+
+    <div class="page">
+      <div class="toolbar">
+        <a class="home-link" href="../index.html">回首頁</a>
+      </div>
+
+      <h1 id="result-page-heading">送出結果</h1>
+      <p id="result-page-lead">本次送出已完成，系統將依目前狀態進行靜態示意判斷。</p>
+      <p id="result-page-note">以下結果只顯示本次勾選送出的課程。</p>
+
+      <div class="status-card">
+        <div class="panel-title">處理狀態</div>
+        <table class="summary-table">
+          <tbody>
+            <tr>
+              <th>狀態</th>
+              <td id="result-status-text">已完成加選送出，部分課程成功、部分課程失敗</td>
+            </tr>
+            <tr>
+              <th>處理說明</th>
+              <td id="result-description-text">
+                請依下列表格查看各課程處理結果，並可返回課表頁比對。
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title" id="result-detail-title">結果明細</div>
+
+        <div class="table-wrap">
+          <table class="course-table">
+            <thead>
+              <tr>
+                <th>課號</th>
+                <th>課程名稱</th>
+                <th>時段</th>
+                <th>結果</th>
+                <th>原因</th>
+              </tr>
+            </thead>
+            <tbody id="result-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="status-card">
+        <div class="panel-title">結果摘要</div>
+        <table class="summary-table">
+          <tbody>
+            <tr>
+              <th>成功</th>
+              <td id="success-count">0 門</td>
+            </tr>
+            <tr>
+              <th>失敗</th>
+              <td id="fail-count">0 門</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="result-actions">
+        <a class="home-link" id="result-back-link" href="./add-course-select.html"
+          >返回上一頁</a
+        >
+        <a class="home-link" href="./schedule.html">查看我的課表</a>
+        <a class="primary-button" href="../index.html">回首頁</a>
+      </div>
+
+      <p class="hint">pages/result.html</p>
+    </div>
+    <script type="module" src="../script.js"></script>
+  </body>
+</html>

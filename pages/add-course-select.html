@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>線上加選作業 - 選課頁 | 校務資訊系統</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-page="add-course-select">
+    <div class="banner">
+      <div class="banner-title">校務資訊系統</div>
+    </div>
+
+    <div class="page">
+      <div class="toolbar">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <a class="home-link" href="./add-course.html">返回條件設定</a>
+      </div>
+
+      <h1>線上加選作業</h1>
+      <p>此頁為純靜態選課畫面，提供課程查詢與加選版型展示。</p>
+      <p>目前不連接後端資料，按鈕與內容皆為示意用途。</p>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="panel-title">目前選課條件</div>
+          <table class="summary-table">
+            <tbody>
+              <tr>
+                <th>學年度學期</th>
+                <td>114 學年度第 2 學期</td>
+              </tr>
+              <tr>
+                <th>科系</th>
+                <td id="selected-department">資訊工程學系</td>
+              </tr>
+              <tr>
+                <th>年級</th>
+                <td id="selected-grade">二年級</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-card">
+          <div class="panel-title">加選提醒</div>
+          <ul class="notice-list">
+            <li>本頁為靜態模板，不會真的送出加選結果。</li>
+            <li>實際系統將依選課規則、名額與衝堂情形判斷。</li>
+            <li>請先確認學分上下限與必選修規範。</li>
+            <li><a href="./schedule.html">查看既有課表</a> 可對照衝堂情形。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">課程查詢</div>
+
+        <div class="form-row form-row-3">
+          <div class="form-group">
+            <label class="form-label" for="course-name">課程名稱</label>
+            <input
+              class="form-input"
+              id="course-name"
+              name="course-name"
+              type="text"
+              value="程式"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="teacher-name">授課教師</label>
+            <input
+              class="form-input"
+              id="teacher-name"
+              name="teacher-name"
+              type="text"
+              value="陳老師"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="weekday">星期</label>
+            <select class="form-select" id="weekday" name="weekday">
+              <option>全部</option>
+              <option selected>星期二</option>
+              <option>星期三</option>
+              <option>星期四</option>
+              <option>星期五</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="action-row">
+          <a class="primary-button" href="./add-course-select.html">查詢課程</a>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">可加選課程列表</div>
+
+        <div class="table-wrap">
+          <table class="course-table">
+            <thead>
+              <tr>
+                <th>課號</th>
+                <th>課程名稱</th>
+                <th>學分</th>
+                <th>教師</th>
+                <th>時段</th>
+                <th>教室</th>
+                <th>名額</th>
+                <th>選擇</th>
+              </tr>
+            </thead>
+            <tbody id="candidate-course-table-body"></tbody>
+          </table>
+        </div>
+        <p class="secondary-text" id="candidate-course-empty"></p>
+
+        <div class="submit-panel">
+          <div>
+            <p class="secondary-text">請勾選欲加選課程後，再按下送出加選。</p>
+            <p class="form-feedback" id="selection-feedback"></p>
+          </div>
+          <div class="result-actions">
+            <a class="home-link" href="./schedule.html">查看既有課表</a>
+            <a class="home-link" href="./add-course.html">返回條件設定</a>
+            <button class="primary-button button-reset" id="submit-selection" type="button">
+              送出加選
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <p class="hint">pages/add-course-select.html</p>
+    </div>
+    <script type="module" src="../script.js"></script>
+  </body>
+</html>

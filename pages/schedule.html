@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的課表 | 校務資訊系統</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-page="schedule">
+    <div class="banner">
+      <div class="banner-title">校務資訊系統</div>
+    </div>
+
+    <div class="page">
+      <div class="toolbar">
+        <a class="home-link" href="../index.html">回首頁</a>
+      </div>
+
+      <h1>我的課表</h1>
+      <p>114 學年度第 2 學期既有修課資料如下，供目前加選結果比對使用。</p>
+      <p>本頁為靜態課表展示，顯示本學期已排定的課程時段與清單摘要。</p>
+      <p class="secondary-text" id="schedule-added-summary"></p>
+
+      <div class="panel">
+        <div class="panel-title">週課表</div>
+
+        <div class="table-wrap">
+          <table class="weekly-schedule">
+            <thead>
+              <tr>
+                <th>節次</th>
+                <th>星期一</th>
+                <th>星期二</th>
+                <th>星期三</th>
+                <th>星期四</th>
+                <th>星期五</th>
+              </tr>
+            </thead>
+            <tbody id="weekly-schedule-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">本學期課程清單</div>
+
+        <div class="table-wrap">
+          <table class="course-table">
+            <thead>
+              <tr>
+                <th>課號</th>
+                <th>課程名稱</th>
+                <th>學分</th>
+                <th>教師</th>
+                <th>時段</th>
+                <th>教室</th>
+                <th>來源</th>
+              </tr>
+            </thead>
+            <tbody id="schedule-course-list"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="hint">pages/schedule.html</p>
+    </div>
+    <script type="module" src="../script.js"></script>
+  </body>
+</html>

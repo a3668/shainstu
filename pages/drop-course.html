@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>線上退選作業 | 校務資訊系統</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-page="drop-course">
+    <div class="banner">
+      <div class="banner-title">校務資訊系統</div>
+    </div>
+
+    <div class="page">
+      <div class="toolbar">
+        <a class="home-link" href="../index.html">回首頁</a>
+      </div>
+
+      <h1>線上退選作業</h1>
+      <p>本頁依目前課表狀態列出可退選課程，原有課表與加選成功課程都可操作。</p>
+      <p>請勾選欲退選的課程後統一送出，結果頁將只顯示本次勾選項目。</p>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="panel-title">退選提醒</div>
+          <ul class="notice-list">
+            <li>退選結果依目前前端儲存的課表狀態判斷。</li>
+            <li>課程若已不在目前課表中，送出後會顯示退選失敗。</li>
+            <li><a href="./schedule.html">查看我的課表</a> 可先確認目前課程內容。</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <div class="panel-title">目前狀態摘要</div>
+          <p class="secondary-text" id="drop-course-summary"></p>
+          <p class="secondary-text" id="drop-course-empty"></p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">可退選課程列表</div>
+
+        <div class="table-wrap">
+          <table class="course-table">
+            <thead>
+              <tr>
+                <th>課號</th>
+                <th>課程名稱</th>
+                <th>學分</th>
+                <th>教師</th>
+                <th>時段</th>
+                <th>教室</th>
+                <th>來源</th>
+                <th>選擇</th>
+              </tr>
+            </thead>
+            <tbody id="drop-course-table-body"></tbody>
+          </table>
+        </div>
+
+        <div class="submit-panel">
+          <div>
+            <p class="secondary-text">請勾選欲退選課程後，再按下送出退選。</p>
+            <p class="form-feedback" id="drop-selection-feedback"></p>
+          </div>
+          <div class="result-actions">
+            <a class="home-link" href="./schedule.html">查看我的課表</a>
+            <button
+              class="primary-button button-reset"
+              id="submit-drop-selection"
+              type="button"
+            >
+              送出退選
+            </button>
+          </div>
+        </div>
+      </div>
+      <p class="hint">pages/drop-course.html</p>
+    </div>
+    <script type="module" src="../script.js"></script>
+  </body>
+</html>
